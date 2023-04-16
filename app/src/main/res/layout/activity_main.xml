@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/RPN_Display"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_marginBottom="1dp"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/StackFourLine"
+            app:layout_constraintBottom_toTopOf="@id/StackThreeLine"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/txtStackRow"
+                android:textAlignment="textStart"
+                app:layout_constraintRight_toLeftOf="@id/stackFour"
+                android:id="@+id/stackFourNum"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+            <TextView
+                android:id="@+id/stackFour"
+                style="@style/txtStackRow"
+                android:layout_weight="13"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/stackFourNum"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/StackThreeLine"
+            app:layout_constraintBottom_toTopOf="@id/StackTwoLine"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/StackFourLine">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/txtStackRow"
+                android:layout_weight="1"
+                android:textAlignment="textStart"
+                app:layout_constraintRight_toLeftOf="@id/stackThree"
+                android:id="@+id/stackThreeNum"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+            <TextView
+                android:id="@+id/stackThree"
+                style="@style/txtStackRow"
+                android:layout_weight="13"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/stackThreeNum"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/StackTwoLine"
+            app:layout_constraintBottom_toTopOf="@id/StackOneLine"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/StackThreeLine">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/txtStackRow"
+                android:textAlignment="textStart"
+                app:layout_constraintRight_toLeftOf="@id/stackTwo"
+                android:id="@+id/stackTwoNum"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+            <TextView
+                android:id="@+id/stackTwo"
+                style="@style/txtStackRow"
+                android:layout_weight="13"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/stackTwoNum"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/StackOneLine"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/StackTwoLine">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/txtStackRow"
+                android:textAlignment="textStart"
+                app:layout_constraintRight_toLeftOf="@id/stackOne"
+                android:id="@+id/stackOneNum"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+            <TextView
+                android:id="@+id/stackOne"
+                android:layout_weight="13"
+                style="@style/txtStackRow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/stackOneNum"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout style="@style/btnRow">
+
+        <Button
+            android:id="@+id/btnDrop"
+            style="@style/btnOperation"
+            android:textSize="25sp"
+            android:text="@string/drop" />
+
+        <Button
+            android:id="@+id/btnSwap"
+            style="@style/btnOperation"
+            android:textSize="25sp"
+            android:text="@string/swap" />
+
+        <Button
+            android:id="@+id/btnUndo"
+            style="@style/btnOperation"
+            android:text="@string/undo" />
+
+        <Button
+            android:id="@+id/btnAllclear"
+            style="@style/btnOperation"
+            android:text="@string/all_clear"
+            android:textColor="@color/blue" />
+
+        <Button
+            android:id="@+id/btnSettings"
+            style="@style/btnOperation"
+            android:foreground="@android:drawable/ic_menu_preferences"
+            android:text="@string/settings"
+            android:textColor="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/btnRow">
+
+        <Button
+            android:id="@+id/btnSeven"
+            style="@style/btnNum"
+            android:text="@string/seven" />
+
+        <Button
+            android:id="@+id/btnEight"
+            style="@style/btnNum"
+            android:text="@string/eight" />
+
+        <Button
+            android:id="@+id/btnNine"
+            style="@style/btnNum"
+            android:text="@string/nine" />
+
+        <Button
+            android:id="@+id/btnExponent"
+            style="@style/btnOperation"
+            android:text="@string/exponent" />
+
+        <Button
+            android:id="@+id/btnRoot"
+            style="@style/btnOperation"
+            android:text="@string/root" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/btnRow">
+
+        <Button
+            android:id="@+id/btnFour"
+            style="@style/btnNum"
+            android:text="@string/four" />
+
+        <Button
+            android:id="@+id/btnFive"
+            style="@style/btnNum"
+            android:text="@string/five" />
+
+        <Button
+            android:id="@+id/btnSix"
+            style="@style/btnNum"
+            android:text="@string/six" />
+
+        <Button
+            android:id="@+id/btnMultiply"
+            style="@style/btnOperation"
+            android:text="@string/multiply" />
+
+        <Button
+            android:id="@+id/btnDivide"
+            style="@style/btnOperation"
+            android:text="@string/divide" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/btnRow">
+
+        <Button
+            android:id="@+id/btnOne"
+            style="@style/btnNum"
+            android:text="@string/one" />
+
+        <Button
+            android:id="@+id/btnTwo"
+            style="@style/btnNum"
+            android:text="@string/two" />
+
+        <Button
+            android:id="@+id/btnThree"
+            style="@style/btnNum"
+            android:text="@string/three" />
+
+        <Button
+            android:id="@+id/btnPlus"
+            style="@style/btnOperation"
+            android:text="@string/plus" />
+
+        <Button
+            android:id="@+id/btnMinus"
+            style="@style/btnOperation"
+            android:text="@string/minus" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/btnRow">
+
+        <Button
+            android:id="@+id/btnZero"
+            style="@style/btnNum"
+            android:text="@string/zero" />
+
+        <Button
+            android:id="@+id/btnSign"
+            style="@style/btnNum"
+            android:text="@string/sign" />
+
+        <Button
+            android:id="@+id/btnDecimal"
+            style="@style/btnNum"
+            android:text="@string/decimal" />
+
+        <Button
+            android:id="@+id/btnEnter"
+            style="@style/btnOperation"
+            android:layout_weight="2"
+            android:layout_margin="2dp"
+            android:background="@color/red"
+            android:text="@string/enter"
+            android:textColor="@color/black" />
+    </LinearLayout>
+</LinearLayout>

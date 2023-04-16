@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pure_white"
+    tools:context=".ConfigurationActivity">
+
+    <RadioGroup
+        android:id="@+id/radioGroupKeyboard"
+        android:layout_width="158dp"
+        android:layout_height="192dp"
+        android:layout_marginBottom="400dp"
+        android:background="@color/pure_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/radioGroupDisplay"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewKey">
+
+        <RadioButton
+            android:id="@+id/rbtnColorWhiteK"
+            style="@style/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/color_white" />
+
+        <RadioButton
+            android:id="@+id/rbtnColorRedK"
+            style="@style/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/color_red" />
+
+        <RadioButton
+            android:id="@+id/rbtnColorGreyK"
+            style="@style/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/color_grey" />
+
+        <RadioButton
+            android:id="@+id/rbtnColorGreenK"
+            style="@style/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/color_green" />
+
+        <RadioButton
+            android:id="@+id/rbtnColorBlueK"
+            style="@style/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/color_blue" />
+
+        <RadioButton
+            android:id="@+id/rbtnColorYellowK"
+            style="@style/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/color_yellow" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroupDisplay"
+        android:layout_width="158dp"
+        android:layout_height="192dp"
+        android:layout_marginBottom="400dp"
+        android:background="@color/pure_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/radioGroupKeyboard"
+        app:layout_constraintTop_toBottomOf="@id/textViewDisp">
+
+        <RadioButton
+            android:id="@+id/rbtnColorWhite"
+            style="@style/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/color_white" />
+
+        <RadioButton
+            android:id="@+id/rbtnColorRed"
+            style="@style/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/color_red" />
+
+        <RadioButton
+            android:id="@+id/rbtnColorGrey"
+            style="@style/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/color_grey" />
+
+        <RadioButton
+            android:id="@+id/rbtnColorGreen"
+            style="@style/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/color_green" />
+
+        <RadioButton
+            android:id="@+id/rbtnColorBlue"
+            style="@style/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/color_blue" />
+
+        <RadioButton
+            android:id="@+id/rbtnColorYellow"
+            style="@style/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/color_yellow" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/Config"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="652dp"
+        android:background="@color/pure_white"
+        android:text="CONFIGURATION"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewDisp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="32dp"
+        android:background="#FFFFFF"
+        android:text="Display Color"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/radioGroupDisplay"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/textViewKey"
+        app:layout_constraintTop_toBottomOf="@id/Config" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Return"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <TextView
+        android:id="@+id/textViewKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:text="Key Color"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/radioGroupKeyboard"
+        app:layout_constraintLeft_toRightOf="@id/textViewDisp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Config" />
+
+    <TextView
+        android:id="@+id/textViewPrecision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="256dp"
+        android:background="#FFFFFF"
+        android:text="Decimal Precision"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@id/precision"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Config" />
+
+    <NumberPicker
+        android:id="@+id/precision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="128dp"
+        android:background="@color/pure_white"
+        android:foregroundTint="@color/black"
+        android:theme="@style/AppTheme.Picker"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewPrecision" />
+</androidx.constraintlayout.widget.ConstraintLayout>
